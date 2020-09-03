@@ -1,22 +1,24 @@
 import React from 'react';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App f-height">
+        <Navbar />
+          <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/about' component={About} />
+              <Route path='/projects' component={Projects} />
+              <Route path='/contact' component={Contact} />
+          </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

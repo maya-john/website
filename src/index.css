@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,78 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #232323;
+  height: 100%;
+  line-height: 150%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.f-height {
+  height: 90%;
+  width: 100%;
+}
+
+.vert-center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.lower {
+  text-transform: none;
+}
+
+.icon img {
+  position: top;
+  margin-top: 10px;
+  top: 20px;
+  height: 45px;
+}
+
+.none {
+  text-decoration: none;
+}
+
+.link-line a:link {
+  text-decoration: underline;
+}
+
+.link-line a:hover {
+  text-decoration: none;
+}
+
+.green-text, a {
+  text-color: '#4caf50';
+}
+
+.orange-text, a {
+  text-color: '#ff9800';
+}
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* label color */
+.input-field label {
+  color: #9e9e9e;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #ff9800;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #ff9800;
+  box-shadow: 0 1px 0 0 #ff9800;
 }
