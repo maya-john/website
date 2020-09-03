@@ -13,21 +13,27 @@ class Contact extends Component {
 
     handleSubmit(e) {
         e.preventDefault()
-
+        /*
         let data = {
             name: this.state.name,
             email: this.state.email,
             subject: this.state.subject,
             message: this.state.message
         }
-
-        axios.post('API_URI', data)
-            .then( res => {
-                this.setState({sent: true}, this.resetForm())
+        */
+        const enquiryBody = { ...this.state };
+        delete enquiryBody.success;
+        axios({
+            method: 'post',
+            url: 'http://localhost:8080/email',
+            data: enquiryBody
+        })
+            .then(res => {
+                if (res.status) this.setState({ success: true });
             })
-            .catch( () => {
-                console.log('message not sent')
-            })
+            .catch(err => {
+                console.log(err.message ? err.message : 'Unknown error');
+            });
 
         const resetForm = () => {
             this.setState({
@@ -61,19 +67,19 @@ class Contact extends Component {
                 <form onSubmit={this.handleSubmit} id="contact-form">
                     <div className="input-field">
                         <label htmlFor="name">name</label>
-                        <input onChange={this.onNameChange} id='name' type="text" className="validate orange-text" required/>
+                        <input id='name' type="text" className="validate orange-text" required/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="email">email address</label>
-                        <input onChange={this.onEmailChange} id='email' type="email" className="validate orange-text" required/>
+                        <input id='email' type="email" className="validate orange-text" required/>
                     </div>
                     <div className="input-field">
                         <label htmlFor="subject">subject</label>
-                        <input onChange={this.onSubjectChange} id='subject' type="text" className="validate orange-text" />
+                        <input id='subject' type="text" className="validate orange-text" />
                     </div>
                     <div className="input-field">
                         <label htmlFor="message">message</label>
-                        <textarea onChange={this.onMessageChange} id='message' className="materialize-textarea orange-text" data-length='500' required/>
+                        <textarea id='message' className="materialize-textarea orange-text" data-length='500' required/>
                     </div><br />
                     <button type="submit" className="btn-large lower z-depth-2 grey darken-4 orange-text none">submit</button>
                 </form>

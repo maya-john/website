@@ -11,6 +11,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "feather-icons": "^4.28.0",
+    "github-repo-display-react": "^1.0.2",
     "nodemailer": "^6.4.11",
     "particles-bg": "^2.5.0",
     "react": "^16.13.1",

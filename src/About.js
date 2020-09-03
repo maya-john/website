@@ -13,7 +13,7 @@ function About() {
                     although currently
                     based in philadelphia for my studies, i hail from a town called milton keynes in south-east england.
                     <br/><br/>
-                    i am an avid rock climber and love it so much that i am a rock wall assistant at the drexel rock climbing wall. in addition to that, i spend a lot of time learning new
+                    i am an avid rock climber and love it so much that became a rock wall assistant at the drexel rock climbing wall. in addition to that, i spend a lot of time learning new
                     frameworks and programming languages, while also trying to learn more about my field of study by
                     doing activities like <a href="https://overthewire.org/wargames/" target="_blank" className='red-text'>overthewire
                     </a> and <a href="https://www.hackthebox.eu/home/users/profile/247583" target="_blank" className='red-text'>hackthebox</a>. i frequently attend hackathons
