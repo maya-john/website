@@ -29,7 +29,7 @@ class Contact extends Component {
                 console.log('message not sent')
             })
 
-        resetForm = () => {
+        const resetForm = () => {
             this.setState({
                 name: '',
                 email: '',
