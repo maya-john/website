@@ -162,3 +162,14 @@ code {
   align-items: center;
   align-content: center;
 }
+
+.right-navbar-container {
+  display: flex;
+  height: 100%;
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
